@@ -112,6 +112,43 @@ Each skill includes:
 
 ## 🎯 Getting Started
 
+Claude Scientific Skills follows the open [Agent Skills](https://agentskills.io/) standard and is fully compatible with [APM (Agent Package Manager)](https://github.com/microsoft/apm) — the easiest way to install and manage skills.
+
+### Option A: Install with APM (Recommended)
+
+[APM](https://github.com/microsoft/apm) manages skill dependencies like `npm` does for JavaScript. Works with Claude, Copilot, Cursor, Codex, and Gemini.
+
+**Install APM:**
+```bash
+curl -sSL https://raw.githubusercontent.com/microsoft/apm/main/install.sh | sh
+```
+
+**Install all 170+ scientific skills into your project:**
+```bash
+apm install shaedis/claude-scientific-skills
+apm compile
+```
+
+`apm compile` generates `CLAUDE.md` and `AGENTS.md` so every skill is immediately available across all supported AI tools.
+
+**Install a single skill:**
+```bash
+# Example: just the RDKit skill
+apm install shaedis/claude-scientific-skills/scientific-skills/rdkit
+
+# Example: just the AlphaFold database skill
+apm install shaedis/claude-scientific-skills/scientific-skills/alphafold-database
+
+# Example: just the Scanpy skill
+apm install shaedis/claude-scientific-skills/scientific-skills/scanpy
+
+apm compile
+```
+
+---
+
+### Option B: Manual Install (Clone & Copy)
+
 Claude Scientific Skills follows the open [Agent Skills](https://agentskills.io/) standard. Simply copy the skill folders into your skills directory and your AI agent will automatically discover and use them.
 
 ### Step 1: Clone the Repository
